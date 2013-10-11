@@ -1,0 +1,3 @@
+function getData(id,callback){
+	
+}

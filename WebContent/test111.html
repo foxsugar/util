@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>Õº∆¨◊Û”““∆∂Ø</title>
+    </head>
+    <BODY>
+        <script LANGUAGE="JavaScript">
+            <!--
+            step = 0;
+            obj = new Image();
+            function anim(xp, xk, smer){
+                obj.style.left = x;
+                x += step * smer;
+                if (x >= (xk + xp) / 2) {
+                    if (smer == 1) 
+                        step--;
+                    else 
+                        step++;
+                }
+                else {
+                    if (smer == 1) 
+                        step++;
+                    else 
+                        step--;
+                }
+                if (x >= xk) {
+                    x = xk;
+                    smer = -1;
+                }
+                if (x <= xp) {
+                    x = xp;
+                    smer = 1;
+                }
+                
+                setTimeout('anim(' + xp + ',' + xk + ',' + smer + ')', 50);
+            }
+            
+            function moveLR(objID, movingarea_width, c){
+                if (navigator.appName == "Netscape") 
+                    window_width = window.innerWidth;
+                else 
+                    window_width = document.body.offsetWidth;
+                obj = document.images[objID];
+                image_width = obj.width;
+                x1 = obj.style.left;
+                x = Number(x1.substring(0, x1.length - 2));
+                if (c == 0) {
+                    if (movingarea_width == 0) {
+                        right_margin = window_width - image_width;
+                        anim(x, right_margin, 1);
+                    }
+                    else {
+                        right_margin = x + movingarea_width - image_width;
+                        if (movingarea_width < x + image_width) 
+                            window.alert("No space for moving!");
+                        else 
+                            anim(x, right_margin, 1);
+                    }
+                }
+                else {
+                    if (movingarea_width == 0) 
+                        right_margin = window_width - image_width;
+                    else {
+                        x = Math.round((window_width - movingarea_width) / 2);
+                        right_margin = Math.round((window_width + movingarea_width) / 2) - image_width;
+                    }
+                    anim(x, right_margin, 1);
+                }
+            }
+            
+            //-->
+        </script>
+        <img src="zc_tb_22.png" name="picture" style="position: absolute; top: 70; left: 30;" BORDER="0" onclick="javascript:window.open(this.src);" style="CURSOR: pointer" onload="return imgzoom(this,550)">
+        <script LANGUAGE="JavaScript">
+            <!--
+            setTimeout("moveLR('picture',300,1)", 10);
+            //-->
+        </script>
+    </body>
+</html>
