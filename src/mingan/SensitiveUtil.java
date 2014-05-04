@@ -23,6 +23,8 @@ import org.slf4j.LoggerFactory;
 import org.wltea.analyzer.core.IKSegmenter;
 import org.wltea.analyzer.core.Lexeme;
 
+import file.FileUtils;
+
 public class SensitiveUtil {
 	//日志
 	private static final Logger logger = LoggerFactory.getLogger(SensitiveUtil.class);
@@ -148,14 +150,13 @@ public class SensitiveUtil {
 	
 	public static void loadSensitiveWord (){
 		//敏感词
-		Set<String> SensitiveWord = new HashSet<String>(FileUtil.readLines(new File(getFilePath())));
+		Set<String> SensitiveWord = new HashSet<String>(FileUtils.readLines(new File(getFilePath())));
 		SensitiveMap = new HashMap<Character,List<String>>();
 		//将敏感词以首字为key进行索引
 		Iterator< String> it = SensitiveWord.iterator();
 		while(it.hasNext()){
 			String s = it.next();
 			Character c = s.charAt(0);
-			s.charAt(0);
 			List<String> list = SensitiveMap.get(c);
 			if(list==null){
 				list  = new ArrayList<String>();
@@ -281,7 +282,7 @@ public class SensitiveUtil {
 	 * @return
 	 */
 	private static String getFilePath() {
-		return FileUtil.ROOTPATH+SENSITIVEFILENAME;
+		return FileUtils.ROOTPATH+SENSITIVEFILENAME;
 	}
 	
 	public static void main(String[] args) {

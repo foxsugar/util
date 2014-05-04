@@ -34,6 +34,7 @@ public class FileUtils {
 
 	public static CodepageDetectorProxy DETECTORPROXY =  null;
 	public static final Charset DEFAULTENCODING = Charset.forName("utf-8");
+	public static final String ROOTPATH = FileUtils.class.getResource("/").getPath(); 
 	
 	static{
 		//加载编码嗅探器  此类需要三个依赖jar包 

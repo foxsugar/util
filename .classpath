@@ -15,5 +15,11 @@
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry exported="true" kind="lib" path="D:/JAR/pinyin4j-2.5.0.jar"/>
 	<classpathentry exported="true" kind="lib" path="D:/JAR/commons-io-2.4-bin/commons-io-2.4/commons-io-2.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/JAR/zt-zip-1.7-20130814.135533-33.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/JAR/slf4j-api-1.7.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/JAR/bianma/antlr.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/JAR/bianma/chardet.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/JAR/bianma/cpdetector_1.0.7.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/JAR/IKAnalyzer2012_u6/IKAnalyzer2012_u6.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

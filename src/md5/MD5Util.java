@@ -2,6 +2,7 @@ package md5;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.util.HashMap;
@@ -32,6 +33,13 @@ public class MD5Util {
 		} catch (Exception e) {
 			e.printStackTrace();
 			return null;
+		}finally{
+			if(in!=null)
+				try {
+					in.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
 		}
 		BigInteger bigInt = new BigInteger(1, digest.digest());
 		//16进制 将获得32位或31位字符串

@@ -20,13 +20,12 @@ public class SensitiveTest {
 		while(it.hasNext()){
 			String s = it.next();
 			Character c = s.charAt(0);
-			s.charAt(0);
 			List<String> list = map.get(c);
 			if(list==null){
 				list  = new ArrayList<String>();
+				map.put(c, list);
 			}
 			list.add(s);
-			map.put(c, list);
 		}
 	}
 	public static void sort(){

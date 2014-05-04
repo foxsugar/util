@@ -31,7 +31,7 @@ public class PinyinUtil {
 				char c = manyChinese[i];
 				//如果是标点
 				if(c>=65281&&c<=65374)
-					c = PunctuationConver(c);
+					c = punctuationConver(c);
 				
 				//不是中文将原文输出
 				if(!isChinese(c)){
@@ -70,7 +70,7 @@ public class PinyinUtil {
 	/**
 	 * 标点转换
 	 */
-	public static char PunctuationConver(char c){
+	public static char punctuationConver(char c){
 		//中文标点范围 大于65281 小雨65374
 		int charNum = (int)c;
 		if(c>=65281&&c<=65374){
@@ -79,8 +79,6 @@ public class PinyinUtil {
 		}
 		return (char)charNum;
 	}
-	
-	
 	
 	
 	public static void main(String[] args) {
