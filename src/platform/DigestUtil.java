@@ -1,4 +1,4 @@
-package httpClient;
+package platform;
 
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
@@ -121,9 +121,10 @@ public class DigestUtil {
 
 	
 	public static void main(String[] args) {
-		System.out.println();
-		String s = "80246373"+"1390541540"+"S1"+"d7c745d3c7dda9a8b5ca34872507db90";
-		//DigestUtil.Md5(s.getBytes());
-		System.out.println(DigestUtils.md5Hex("qid=80246373&time=1390541540&server_id=S1d7c745d3c7dda9a8b5ca34872507db90"));
+//		System.out.println();
+//		String s = "80246373"+"1390541540"+"S1"+"d7c745d3c7dda9a8b5ca34872507db90";
+//		//DigestUtil.Md5(s.getBytes());
+//		System.out.println(DigestUtils.md5Hex("qid=80246373&time=1390541540&server_id=S1d7c745d3c7dda9a8b5ca34872507db90"));
+		System.out.println(MD5("a"));
 	}
 }

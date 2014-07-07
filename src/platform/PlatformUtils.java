@@ -1,4 +1,4 @@
-package httpClient;
+package platform;
 
 import java.util.ArrayList;
 
@@ -61,7 +61,7 @@ public class PlatformUtils {
     		result.append(s).append(index==parm.length-1?"":',');
     		index++;
     	}
-    	System.out.println(result.toString());
+    	//System.out.println(result.toString());
     	return DigestUtil.MD5(result.toString());
     }
     public static void main(String[] args) {
@@ -76,7 +76,7 @@ public class PlatformUtils {
 //String sign = getMD5(qid,server_id,time,agent,key);
 ////结果 sign= c7964be1cdfd585451e86554ebcebc76
 //System.out.println(sign);
-System.out.println(DigestUtil.MD5("水晶石-沁雨"));
+System.out.println(DigestUtil.MD5("水晶石-ds"));
 System.out.println(System.currentTimeMillis());
 System.out.println("1398146253");
     

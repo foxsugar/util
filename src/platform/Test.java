@@ -1,4 +1,4 @@
-package httpClient;
+package platform;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;

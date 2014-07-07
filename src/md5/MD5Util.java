@@ -8,7 +8,13 @@ import java.security.MessageDigest;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MD5Util {
+public final class MD5Util {
+	
+	private final static String[] hexDigits = { 
+	      "0", "1", "2", "3", "4", "5", "6", "7", 
+	      "8", "9", "a", "b", "c", "d", "e", "f"}; 
+	
+	
 
 	/**
 	 * 获得文件的MD5值
@@ -46,6 +52,12 @@ public class MD5Util {
 		return bigInt.toString(16);
 	}
 
+	/**
+	 * 获得文件夹的MD5
+	 * @param file
+	 * @param listChild
+	 * @return
+	 */
 	public static Map<String, String> getDirMD5(File file, boolean listChild) {
 		if (!file.isDirectory()) {
 			return null;
@@ -67,6 +79,45 @@ public class MD5Util {
 		}
 		return map;
 	}
+	
+	  /**
+	   * 获得字符串的MD5
+	   * @param origin
+	   * @return
+	   */
+	  public static String getStringMD5(String origin) { 
+	    String resultString = null; 
+	
+	    try { 
+	      resultString=origin; 
+	      MessageDigest md = MessageDigest.getInstance("MD5"); 
+	      resultString=byteArrayToHexString(md.digest(resultString.getBytes())); 
+	    } 
+	    catch (Exception ex) { 
+	
+	    } 
+	    return resultString; 
+	  } 
+	  
+	  
+	  
+	  public static String byteArrayToHexString(byte[] b) { 
+		    StringBuffer resultSb = new StringBuffer(); 
+		    for (int i = 0; i < b.length; i++) { 
+		      resultSb.append(byteToHexString(b[i])); 
+		    } 
+		    return resultSb.toString(); 
+		  } 
+		
+		  private static String byteToHexString(byte b) { 
+		    int n = b; 
+		    if (n < 0) 
+		      n = 256 + n; 
+		    int d1 = n / 16; 
+		    int d2 = n % 16; 
+		    return hexDigits[d1] + hexDigits[d2]; 
+		  } 
+		
 
 	public static void main(String[] args) {
 

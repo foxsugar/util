@@ -69,7 +69,6 @@ public class PlatformJoinAction {
 	
 	
 	private void genCardKey(){
-
 		String[] typeStr = new String[]{"mt-a","mt-b","mt-c","mt-d"};
 		List<Cards> list = new ArrayList<Cards>();
 		for(String tys:typeStr){
@@ -97,12 +96,6 @@ public class PlatformJoinAction {
 			}
 		}
 		CardsServiceFactory.getInstance().saveCards(list);
-
-		
-//		
-		
-		
-		
 	}
 	
 	@RequestMapping(value = "/login4p")

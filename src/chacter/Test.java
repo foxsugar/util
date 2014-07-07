@@ -1,8 +1,8 @@
 package chacter;
 
-import httpClient.DigestUtil;
-
 import java.io.UnsupportedEncodingException;
+
+import platform.DigestUtil;
 
 public class Test {
 	public static void main(String[] args) throws UnsupportedEncodingException {
